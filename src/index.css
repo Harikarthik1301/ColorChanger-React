@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.colorContain{
+  height: 200px;
+  width :200px;
+  border-style: solid;
+  box-shadow: 2px 2px 8px rgb(99, 98, 98);
+  margin-top: 200px;
+  border-radius: 200px;
+  margin-left: 600px;
+}
+
+.colorName{
+  margin-top: 90px;
+  margin-left: 75px;
+}
+
+.InputForm{
+  margin-left: 610px;
+  margin-top: 50px;
+
+}
+
+.InputForm input{
+  width: 20%;
+  height: 30px;
+  margin: 0.5rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+}
