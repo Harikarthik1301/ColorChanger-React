@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
 
-const ColorContainer = ({color}) => {
+const ColorContainer = ({ colorval, hexvalue, toggle }) => {
   return (
-    <div className='colorContain' style={{background:color}}><p className='colorName'>{color}</p></div>
-  )
-}
+    <div
+      className="colorContain"
+      style={{ 
+        backgroundColor: colorval, 
+      }}
+    >
+      <p style={{ 
+        color: toggle ? "white" : "black"
+      }}className="colorName">{colorval} {hexvalue}</p>
+    </div>
+  );
+};
 
-export default ColorContainer
+export default ColorContainer;

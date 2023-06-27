@@ -1,14 +1,29 @@
-import React from 'react'
+import React from "react";
+import colorname from "colornames";
 
-const ColorInput = ({color,setcolor}) => {
+const ColorInput = ({
+  colorval,
+  setcolorval,
+  sethexvalue,
+  toggle,
+  settoggle,
+}) => {
   return (
-    <form className='InputForm'>
-        <input type="text" 
-        placeholder='Enter Color'
-        value={color}
-        onChange={(e)=> setcolor(e.target.value)}/>
+    <form onSubmit={(e) => e.preventDefault()} className="InputForm">
+      <input
+        type="text"
+        placeholder="Enter Color"
+        value={colorval}
+        onChange={(e) => {
+          setcolorval(e.target.value);
+          sethexvalue(colorname(e.target.value));
+        }}
+      />
+      <button type="button" onClick={() => settoggle(!toggle)}>
+        Toggler
+      </button>
     </form>
-  )
-}
+  );
+};
 
-export default ColorInput
+export default ColorInput;
